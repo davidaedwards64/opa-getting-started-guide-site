@@ -1,0 +1,6 @@
+/* Word-derived images carry fixed inch widths; keep them inside the content column */
+.md-content img {
+  max-width: 100%;
+  height: auto;
+  border: 1pt solid #d0d0d0;
+}

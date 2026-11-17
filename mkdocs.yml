@@ -1,0 +1,87 @@
+site_name: Okta Privileged Access Getting Started Guide
+docs_dir: docs
+site_dir: site
+use_directory_urls: false  # keeps the raw <img src="../media/..."> paths resolving
+
+theme:
+  name: material
+  features:
+    - navigation.indexes
+    - navigation.footer
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+extra_css:
+  - extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - print-site   # keep last
+
+nav:
+  - Overview: README.md
+  - "Introduction":
+    - 01-introduction/README.md
+    - "Okta Privileged Access": 01-introduction/01-okta-privileged-access.md
+    - "Use Cases in this Document": 01-introduction/02-use-cases-in-this-document.md
+  - "Environment Setup":
+    - 02-environment-setup/README.md
+    - "Setup Pre-Reqs": 02-environment-setup/01-setup-pre-reqs.md
+    - "Create New OPA Tenant": 02-environment-setup/02-create-new-opa-tenant.md
+    - "Configure Identity Lifecycle for the App": 02-environment-setup/03-configure-identity-lifecycle-for-the-app.md
+    - "Configure Access Requests": 02-environment-setup/04-configure-access-requests.md
+  - "Introduction to Administration":
+    - 03-introduction-to-administration/README.md
+    - "OPA Administration and Administrators": 03-introduction-to-administration/01-opa-administration-and-administrators.md
+  - "Exploring Secrets Management":
+    - 04-exploring-secrets-management/README.md
+    - "Create Secrets Users and Managers": 04-exploring-secrets-management/01-create-secrets-users-and-managers.md
+    - "Create Top-Level Secret Folders": 04-exploring-secrets-management/02-create-top-level-secret-folders.md
+    - "Create Policies for Folders and Secrets": 04-exploring-secrets-management/03-create-policies-for-folders-and-secrets.md
+    - "Create Sub-Folders for Secrets": 04-exploring-secrets-management/04-create-sub-folders-for-secrets.md
+    - "Create Secrets": 04-exploring-secrets-management/05-create-secrets.md
+    - "Access Secrets": 04-exploring-secrets-management/06-access-secrets.md
+    - "Summary": 04-exploring-secrets-management/07-summary.md
+  - "Exploring Infrastructure (Server) Access":
+    - 05-exploring-infrastructure-access/README.md
+    - "Create Server Users and Administrators": 05-exploring-infrastructure-access/01-create-server-users-and-administrators.md
+    - "Infrastructure Component Installation": 05-exploring-infrastructure-access/02-infrastructure-component-installation.md
+    - "Individual Server Access Use Case": 05-exploring-infrastructure-access/03-individual-server-access-use-case.md
+    - "Admin Level Individual Access Use Case": 05-exploring-infrastructure-access/04-admin-level-individual-access-use-case.md
+    - "Use of Sudo Commands with Individual Access": 05-exploring-infrastructure-access/05-use-of-sudo-commands-with-individual-access.md
+    - "Shared Account (Vaulted Password) Access Use Case": 05-exploring-infrastructure-access/06-shared-account-vaulted-password-access-use-case.md
+    - "Adding the Approval Requests Condition to Policies": 05-exploring-infrastructure-access/07-adding-the-approval-requests-condition-to-policies.md
+  - "Exploring AD Integration":
+    - 06-exploring-ad-integration/README.md
+    - "Introduction to AD Integration": 06-exploring-ad-integration/01-introduction-to-ad-integration.md
+    - "Okta Environment Preparation": 06-exploring-ad-integration/02-okta-environment-preparation.md
+    - "Confirm Pre-reqs Prior to Configuring Integration": 06-exploring-ad-integration/03-confirm-pre-reqs-prior-to-configuring-integration.md
+    - "Configure the OPA AD Integration": 06-exploring-ad-integration/04-configure-the-opa-ad-integration.md
+    - "Configure and Test Shared Account Checkout": 06-exploring-ad-integration/05-configure-and-test-shared-account-checkout.md
+    - "Configure and Test Individual Admin Account Checkout": 06-exploring-ad-integration/06-configure-and-test-individual-admin-account-checkout.md
+    - "Configure and Test RDP with AD Credentials": 06-exploring-ad-integration/07-configure-and-test-rdp-with-ad-credentials.md
+    - "How To Determine the DN of an OU in AD": 06-exploring-ad-integration/08-how-to-determine-the-dn-of-an-ou-in-ad.md
+  - "Exploring Auditing, Reporting and Compliance Use Cases":
+    - 07-auditing-reporting-compliance/README.md
+    - "Viewing Session Recordings": 07-auditing-reporting-compliance/01-viewing-session-recordings.md
+    - "Monitoring for Tampered Passwords": 07-auditing-reporting-compliance/02-monitoring-for-tampered-passwords.md
+    - "OPA System Log Events and Custom Reporting": 07-auditing-reporting-compliance/03-opa-system-log-events-and-custom-reporting.md
+  - "Exploring Okta and SaaS Service Accounts":
+    - 08-okta-saas-service-accounts/README.md
+    - "Pre-Reqs for the Okta / SaaS Service Acct Use Cases": 08-okta-saas-service-accounts/01-pre-reqs-for-the-okta-saas-service-acct-use-cases.md
+    - "Managing Okta Service Accounts": 08-okta-saas-service-accounts/02-managing-okta-service-accounts.md
+    - "Managing BYO SaaS App Service Accounts": 08-okta-saas-service-accounts/03-managing-byo-saas-app-service-accounts.md
+    - "Managing Integrated SaaS App Service Accounts": 08-okta-saas-service-accounts/04-managing-integrated-saas-app-service-accounts.md
